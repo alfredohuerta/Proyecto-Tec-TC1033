@@ -75,6 +75,15 @@ int main(){
     //Crear un mapa vacío donde se irán almacenando las ventas de cada empleado
     unordered_map<string, double> ventas;
 
+    //Menu de bienvenida.
+    cout << "Bienvenido al registro de ventas, a continuación se le presentará nuestro catálogo. " << endl;
+
+    for (auto itr = product.begin(); itr != product.end(); itr++){
+        cout << "La ID del producto es: " << itr->first << " cuesta: $" << itr-> second << endl;
+    }
+
+    cout << "Para realizar el registro, primero identifíquese con su ID única, después indique cuántos productos va a registrar e ingrese la ID del producto." << endl;
+
     do
     {
         //Asegurarse de que los ciclos se iniciarán.
@@ -109,7 +118,7 @@ int main(){
             }
         }
 
-        cout << "Si ya terminó su turno, tecleé 0, sino 1:\t";
+        cout << "Si es el último empleado, tecleé 1, sino 0:\t";
         cin >> respuesta;
         
         //Condicional para cambio de empleado
